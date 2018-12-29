@@ -1,0 +1,5 @@
+2018-12-19-main--ERROR-com.moneymoney.account.SavingsAccount:Amount Exceeded - Insufficient Balance
+2018-12-19-main--ERROR-com.moneymoney.account.SavingsAccount:Amount was Invalid or Zero
+2018-12-19-main--INFO -com.moneymoney.account.SavingsAccount:Amount was correctly entered
+2018-12-19-main--INFO -com.moneymoney.account.SavingsAccount:Account deucted with 1000.0 INR Successfully
+2018-12-19-main--ERROR-com.moneymoney.account.SavingsAccount:Amount was Invalid or Zero
