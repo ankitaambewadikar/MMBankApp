@@ -53,7 +53,7 @@ public class SavingsAccountDAOImpl implements SavingsAccountDAO {
 		Connection connection = DBUtil.getConnection();
 		connection.setAutoCommit(false);
 		PreparedStatement preparedStatement = connection.prepareStatement
-				("UPDATE ACCOUNT SET account_bal=? where account_id=?");
+				("UPDATE ACCOUNT SET account_balance=? where account_id=?");
 		preparedStatement.setDouble(1, currentBalance);
 		preparedStatement.setInt(2, accountNumber);
 		preparedStatement.executeUpdate();
@@ -105,7 +105,7 @@ public class SavingsAccountDAOImpl implements SavingsAccountDAO {
 		PreparedStatement preparedStatement = connection.prepareStatement
 				("DELETE FROM account where account_id=?");
 		preparedStatement.setInt(1, accountNumber);
-		boolean resultSet = preparedStatement.execute();
+		preparedStatement.executeUpdate();
 		SavingsAccount savingAccount = null;
 		return savingAccount;
 	

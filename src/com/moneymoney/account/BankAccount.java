@@ -4,21 +4,21 @@ public class BankAccount {
 	private int accountNumber;
 	private double accountBalance;
 	private String accountHolderName;
-	private static int accountId;
+	//private static int accountId;
 
-	static {
+	/*static {
 		accountId = 100;
-	}
+	}*/
 
 	public BankAccount(String accountHolderName, double accountBalance) {
-		accountNumber = ++accountId;
+		//accountNumber = ++accountId;
 		//this.accountNumber = accountNumber;
 		this.accountHolderName = accountHolderName;
 		this.accountBalance = accountBalance;
 	}
 
 	public BankAccount(String accountHolderName) {
-		accountNumber = ++accountId;
+		//accountNumber = ++accountId;
 		//this.accountNumber = accountNumber;
 		this.accountHolderName = accountHolderName;
 	}

@@ -215,6 +215,7 @@ public class AccountCUI {
 		try {
 			SavingsAccount closeSavingAccount = savingsAccountService
 					.deleteAccount(closeAccountNumber);
+			DBUtil.commit();
 		} catch (ClassNotFoundException | AccountNotFoundException
 				| SQLException e) {
 			e.printStackTrace();
@@ -303,7 +304,6 @@ public class AccountCUI {
 				System.out.println(both);
 			} catch (ClassNotFoundException | SQLException
 					| AccountNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
@@ -315,39 +315,6 @@ public class AccountCUI {
 
 		}
 	}
-
-	/*
-	 * private static void performUpdateAccountIsSalaried(int updateChoice, int
-	 * accountNumber) {
-	 * System.out.println("Enter y/n to keep it salaried or non-salaried to update "
-	 * ); boolean newIssalaried
-	 * =scanner.next().equalsIgnoreCase("n")?false:true;
-	 * updateSalaried(accountNumber,newIssalaried); }
-	 * 
-	 * private static void updateSalaried(int accountNumber, boolean
-	 * newIssalaried) { try {
-	 * 
-	 * System.out.println(savingsAccountService.updateAccountByIsSalaried(
-	 * accountNumber,newIssalaried)); } catch (ClassNotFoundException |
-	 * SQLException e) { e.printStackTrace(); }catch(Exception e){
-	 * e.printStackTrace(); } }
-	 * 
-	 * private static void performUpdateAccountHolderName(int updateChoice,int
-	 * accountNumber) { System.out.println("Enter name to update: "); String
-	 * newAccountHolderName = scanner.nextLine(); newAccountHolderName =
-	 * scanner.nextLine(); updateName(accountNumber,newAccountHolderName); }
-	 * 
-	 * 
-	 * private static void updateName(int accountNumber,String
-	 * newAccountHolderName) { try { SavingsAccount updateSavingAccountName =
-	 * savingsAccountService.updateAccountByAccountHolderName(accountNumber,
-	 * newAccountHolderName); System.out.println(updateSavingAccountName); }
-	 * catch (ClassNotFoundException | SQLException | AccountNotFoundException
-	 * e) { // TODO Auto-generated catch block e.printStackTrace(); }catch
-	 * (Exception e){ e.printStackTrace(); }
-	 * 
-	 * }
-	 */
 
 	private static void searchAccount() {
 		System.out.println("Search Account By:");
@@ -448,6 +415,6 @@ public class AccountCUI {
 
 	private static void performAscendingSort(int choiceOne) {
 		
-		
+		//savingsAccountService.sortAccording(accountHolderName);
 	}
 }
